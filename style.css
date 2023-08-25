@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: dana;
+}
+body,html{
+    width: 100%;
+    min-height: 100vh;
+    
+}
+.img-wrapper{
+    background-image: url(./nature.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.image-middle{
+    background-image: url(./nature.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+@font-face {
+    font-family: dana;
+    src: url(./dana-fanum-regular.woff2);
+  }
+  

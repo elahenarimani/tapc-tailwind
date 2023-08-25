@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tapsi</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    </link>
+</head>
+
+<body>
+    <header class="fixed top-0 left-0 z-10 bg-[white]  w-full h-[60px] ">
+        <div class=" max-w-[85%] m-auto w-full h-full p-3 flex justify-between   items-center     ">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="102" height="22" viewBox="0 0 102 22">
+                    <g fill-rule="evenodd">
+                        <path fill="#000"
+                            d="M102 5.946h-3.222v4.28H91.8v-4.28h-3.221v4.28h-5.637a1.878 1.878 0 0 1-1.879-1.872V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873 1.878 1.878 0 0 1-1.879-1.873V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873h-1.879V5.946h-3.22v4.28h-17.18v3.212h3.758v.535c0 2.656-2.167 4.816-4.831 4.816-2.664 0-4.832-2.16-4.832-4.816v-3.746H37.58v3.746c0 4.426 3.613 8.027 8.053 8.027 4.44 0 8.052-3.6 8.052-8.027v-.535H68.985a5.09 5.09 0 0 0 3.489-1.381 5.09 5.09 0 0 0 3.49 1.38 5.09 5.09 0 0 0 3.489-1.38 5.089 5.089 0 0 0 3.489 1.38H102V5.947z">
+                        </path>
+                        <path fill="#000" d="M84.702 19.297h3.854V22h3.304v-5.946h-7.158zM102 0h-6.561v2.973H102z">
+                        </path>
+                        <path fill="#FF5B35" d="M26.842 11.297H10.737V5.946h16.105zM26.842 22H0v-5.351h26.842z"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class=" lg:hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+            <div class=" hidden lg:flex lg:justify-between mx-6">
+                <div class=" hidden md:flex md:justify-around md:items-center">
+                    <a class=" mt-0 mb-0 ml-6">ویدیوها</a>
+                    <a class=" mt-0 mb-0 ml-6">پشتیبانی</a>
+                    <a class=" mt-0 mb-0 ml-6">امور سهام</a>
+                    <a class=" mt-0 mb-0 ml-6">تپسی پک</a>
+                    <a class=" mt-0 mb-0 ml-6">فرصت های شغلی </a>
+                    <a class=" mt-0 mb-0 ml-6">وبلاگ</a>
+                </div>
+                <div hidden class="lg:flex  lg:justify-center lg:items-center">
+                    <button
+                        class=" w-[153px] h-[36px] bg-[#FF5722]  text-[white] rounded-[10px] cursor-pointer border-none  ">دانلود
+                        تپسی</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class=" max-w-[85%] invisible bg-[white] m-auto w-full h-[60px] ">
+        <div class=" p-3 flex justify-between items-center  md:justify-around md:items-center  lg:justify-between ">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="102" height="22" viewBox="0 0 102 22">
+                    <g fill-rule="evenodd">
+                        <path fill="#000"
+                            d="M102 5.946h-3.222v4.28H91.8v-4.28h-3.221v4.28h-5.637a1.878 1.878 0 0 1-1.879-1.872V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873 1.878 1.878 0 0 1-1.879-1.873V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873h-1.879V5.946h-3.22v4.28h-17.18v3.212h3.758v.535c0 2.656-2.167 4.816-4.831 4.816-2.664 0-4.832-2.16-4.832-4.816v-3.746H37.58v3.746c0 4.426 3.613 8.027 8.053 8.027 4.44 0 8.052-3.6 8.052-8.027v-.535H68.985a5.09 5.09 0 0 0 3.489-1.381 5.09 5.09 0 0 0 3.49 1.38 5.09 5.09 0 0 0 3.489-1.38 5.089 5.089 0 0 0 3.489 1.38H102V5.947z">
+                        </path>
+                        <path fill="#000" d="M84.702 19.297h3.854V22h3.304v-5.946h-7.158zM102 0h-6.561v2.973H102z">
+                        </path>
+                        <path fill="#FF5B35" d="M26.842 11.297H10.737V5.946h16.105zM26.842 22H0v-5.351h26.842z"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class=" lg:hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+            <div class=" hidden lg:flex lg:justify-between mx-6">
+                <div class=" hidden md:flex md:justify-around md:items-center">
+                    <a class=" mt-0 mb-0 ml-6">ویدیوها</a>
+                    <a class=" mt-0 mb-0 ml-6">پشتیبانی</a>
+                    <a class=" mt-0 mb-0 ml-6">امور سهام</a>
+                    <a class=" mt-0 mb-0 ml-6">تپسی پک</a>
+                    <a class=" mt-0 mb-0 ml-6">فرصت های شغلی </a>
+                    <a class=" mt-0 mb-0 ml-6">وبلاگ</a>
+                </div>
+                <div hidden class="lg:flex  lg:justify-center lg:items-center">
+                    <button
+                        class=" w-[153px] h-[36px] bg-[#FF5722]  text-[white] rounded-[10px] cursor-pointer border-none  ">دانلود
+                        تپسی</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="w-full h-[100%]">
+        <div class="img-wrapper w-full min-h-[478px] relative ">
+
+            <!-- <img src="./nature.jpg" class="w-full h-[100%] "> -->
+            <div
+                class="w-[250px] h-[450px] absolute  translate-x-[-50%] left-[50%] top-0  px-[8px] pt-[20px] pb-[10px] flex-col items-center justify-center bg-neutral-200/50 rounded-2xl md:hidden ">
+                <p>تپسی</p>
+                <p>اپلیکیشن درخواست خودرو پیک</p>
+                <button
+                    class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px] bg-[#F0F0F0] border-none  no-underline rounded-md flex justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-down" class="absolute top-[10px] right-[5px]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                    </svg>
+                    <p class=" mx-[10px]">دانلود اپلیکیشن مسافران</p>
+                </button>
+                <button
+                    class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px] bg-[#F0F0F0] border-none  no-underline rounded-md flex justify-start items-center">
+                    <i class="fa fa-facebook-square"></i>
+                    <p class=" mx-[10px]">وب اپلیکیشن مسافران</p>
+                </button>
+                <button
+                    class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px]  border-white border-solid border no-underline border-none  rounded-md flex justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F0F0F0"
+                        class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                    </svg>
+                    <p class=" mx-[10px] text-[#F0F0F0]">ثبت نام راننده خودرو</p>
+                </button>
+                <button
+                    class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px]  border-white   no-underline border-none  rounded-md flex justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F0F0F0" class="bi bi-cloud"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                    </svg>
+                    <p class=" mx-[10px] text-[#F0F0F0]">ثبت نام راننده موتور</p>
+                </button>
+                <button
+                    class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px]  border-white   no-underline border-none  rounded-md flex justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F0F0F0"
+                        class="bi bi-arrow-down" class="absolute top-[10px] right-[5px]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                    </svg>
+                    <p class=" mx-[10px] text-[#F0F0F0]">دانلوداپلیکیشن رانندگان</p>
+                </button>
+
+            </div>
+
+            <div
+                class=" hidden md:block md:w-[530px] md:flex-col md:h-[380px] md:absolute  md:right-[100px]  md:bottom-[50px]  px-[30px] md:pt-[20px] md:pb-[10px]  md:bg-neutral-200/50 md:rounded-2xl  ">
+                <h1 class="hidden md:block md:text-[51px] text-white">تپسی</h1>
+                <p class="hidden md:block md:text-2xl text-white mb-[30px]">اپلیکیشن درخواست خودرو پیک</p>
+                <div class="hidden md:grid md:grid-cols-2 gap-x-[3px] gap-y-[3px]">
+                    <button
+                        class="md:w-[224px] md:h-[52px] md:py-[12px] md:px-[10px] md:my-[10px] md:bg-[#F0F0F0] md:border-none  md:no-underline md:rounded-md md:flex md:justify-start md:items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-down" class="absolute top-[10px] right-[5px]" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                        </svg>
+                        <p class=" md:mx-[10px]">دانلود اپلیکیشن مسافران</p>
+                    </button>
+                    <button
+                        class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px] bg-[#F0F0F0] border-none  no-underline rounded-md flex justify-start items-center">
+                        <i class="fa fa-facebook-square"></i>
+                        <p class=" mx-[10px]">وب اپلیکیشن مسافران</p>
+                    </button>
+                    <button
+                        class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px]  border-white border-solid  no-underline border-[2px]  rounded-md flex justify-start items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F0F0F0"
+                            class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                        </svg>
+                        <p class=" mx-[10px] text-[#F0F0F0]">ثبت نام راننده خودرو</p>
+                    </button>
+                    <button
+                        class="w-[224px] h-[52px] py-[12px] px-[10px] my-[10px]  border-white  border-solid no-underline border-[2px]  rounded-md flex justify-start items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F0F0F0"
+                            class="bi bi-cloud" viewBox="0 0 16 16">
+                            <path
+                                d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                        </svg>
+                        <p class=" mx-[10px] text-[#F0F0F0]">ثبت نام راننده موتور</p>
+                    </button>
+                   
+
+                </div>
+                <div class="flex justify-center">
+                    <button
+                class="w-[224px] h-[52px] py-[12px]  px-[10px] my-[10px]  border-white  border-solid no-underline border-[2px]  rounded-md flex justify-start items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F0F0F0"
+                    class="bi bi-arrow-down" class="absolute top-[10px] right-[5px]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                </svg>
+                <p class=" mx-[10px] text-[#F0F0F0]">دانلوداپلیکیشن رانندگان</p>
+            </button>
+                </div>
+            </div>
+            <img src="./8.PNG" class="hidden  md:hidden lg:inline lg:absolute  lg:left-[200px]  lg:-bottom-[150px] rounded-[25px]">
+        </div>
+    </section>
+    <section class=" max-w-[85%] m-auto w-full ">
+        <div class="px-[20px] py-[30px] mx-[5px] md:mt-[150px]">
+            <p class="text-4xl mb-[40px] md:mb-[80]">سرویس های تپسی</p>
+            <div class="w-[100%] h-[85px] px-[15px] flex justify-between overflow-x-auto overflow-y-hidden">
+                <a class="flex-col justify-between  text-center px-[5px]">
+                    <img src="./1.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px] whitespace-nowrap">تپسی کلاسیک</p>
+                </a>
+                <a class="flex-col justify-between text-center px-[5px]">
+                    <img src="./2.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px]">تپسی تلفنی </p>
+                </a>
+                <a class="flex-col justify-between text-center px-[5px]">
+                    <img src="./3.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px]">تپسی لاین</p>
+                </a>
+                <a class="flex-col justify-between text-center px-[5px]">
+                    <img src="./4.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px]"> موتور پیک </p>
+                </a>
+                <a class="flex-col justify-between text-center px-[5px]">
+                    <img src="./5.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px]"> اتو پیک </p>
+                </a>
+                <a class="flex-col justify-between text-center px-[5px]">
+                    <img src="./6.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px]"> تپسی پلاس</p>
+                </a>
+                <a class="flex-col justify-between text-center px-[5px]">
+                    <img src="./7.PNG" class="min-w-[80px] h-[40px]">
+                    <p class="mt-[7px]">همیار</p>
+                </a>
+            </div>
+            <div w-[100%]>
+                <p class="text-4xl mb-[40px] mt-[30px]">موتور پیک</p>
+                <p class="mb-[130px] md:hidden">با استفاده از سرویس موتوپیک، بسته‌ها و مرسولاتتان با پیک موتور به مقصد
+                    ارسال می‌شوند. این سرویس مناسب زمانی است که می‌خواهید مرسوله سریع‌تر به مقصد برسد. در این سرویس، شما
+                    می‌توانید مسیر رسیدن مرسوله‌تان به مقصد را به صورت لحظه‌ای روی نقشه دنبال کنید.</p>
+                <div class="hidden  md:flex w-[100%] justify-between items-center gap-6">
+                    <div class="w-[49%]">
+                        <p>با استفاده از سرویس موتوپیک، بسته‌ها و مرسولاتتان با پیک موتور به مقصد ارسال می‌شوند. این
+                            سرویس مناسب زمانی است که می‌خواهید مرسوله سریع‌تر به مقصد برسد. در این سرویس، شما می‌توانید
+                            مسیر رسیدن مرسوله‌تان به مقصد را به صورت لحظه‌ای روی نقشه دنبال کنید.</p>
+                    </div>
+                    <div class="w-[49%] ">
+                        <img src="./12.PNG " class="w-[100%] h-[100%]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=" max-w-[85%] m-auto w-full  px-[10px] py-[70px]">
+        <div class="md:hidden flex flex-col   justify-between content-center ">
+            <div class="pl-[100px]  mb-[30px] ">
+                <img src="./13.PNG" class="w-full">
+            </div>
+            <div >
+                <h2  class="mb-[20px] text-[22px] font-semibold">خدمات تپسی ویژه کسب‌وکارها</h2>
+                <p class="text-[14px]">پنل سازمانی تپسی، یک سامانه تحت وب است که به سادگی امکان درخواست هم‌زمان تعداد نامحدودی خودرو و پیک را برای کسب‌وکارها و سازمان‌ها فراهم می‌کند. و با استفاده از آن می‌توانید ماموریت های درون‌شهری و ارسال کالاهای خود را به سادگی مدیریت کنید.</p>
+                <div class="flex justify-start items-center gap-[5px]">
+                    <a href="https://tapsi.ir/corporate" class="text-[14px] text-[#FF5722] py-[20px]">اطلاعات بیشتر سرویس سازمانی</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF5722" class="bi bi-caret-left" viewBox="0 0 16 16">
+                        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                      </svg>
+                </div>
+                <button class="w-[222px] bg-[#FF5722] border-none text-white text-center text-[14px] cursor-pointer no-underline
+                           py-[15px] rounded-xl "> ورود و ثبت نام پنل سازمانی</button>
+                
+            </div>
+        </div>
+        <div class="hidden md:flex flex justify-between content-center ">
+            
+            <div class="w-[49%] ">
+                <h2  class="mb-[20px] text-[22px] font-semibold">خدمات تپسی ویژه کسب‌وکارها</h2>
+                <p class="text-[14px]">پنل سازمانی تپسی، یک سامانه تحت وب است که به سادگی امکان درخواست هم‌زمان تعداد نامحدودی خودرو و پیک را برای کسب‌وکارها و سازمان‌ها فراهم می‌کند. و با استفاده از آن می‌توانید ماموریت های درون‌شهری و ارسال کالاهای خود را به سادگی مدیریت کنید.</p>
+                <div class="flex justify-start items-center gap-[5px]">
+                    <a href="https://tapsi.ir/corporate" class="text-[14px] text-[#FF5722] py-[20px]">اطلاعات بیشتر سرویس سازمانی</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF5722" class="bi bi-caret-left" viewBox="0 0 16 16">
+                        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                      </svg>
+                </div>
+                <button class="w-[222px] bg-[#FF5722] border-none text-white text-center text-[14px] cursor-pointer no-underline
+                           py-[15px] rounded-xl "> ورود و ثبت نام پنل سازمانی</button>
+                
+            </div>
+            <div class="w-[49%] pl-[100px] mb-[30px]">
+                <img src="./13.PNG" class="w-full">
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class=" w-full image-middle">
+       <div class="max-w-[85%] m-auto w-full">
+        <div class="md:hidden image-middle py-[20px]">
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">بسته امنیت سفر</h3>
+            </div>
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">درخواست تلفنی</h3>
+            </div>
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">دسترس‌پذیری برای توان‌یابان</h3>
+            </div>
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">امکانات هوشمند</h3>
+            </div>
+        </div>
+        <div class="hidden md:flex   justify-between items-center gap-[5px]  py-[20px]">
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">بسته امنیت سفر</h3>
+            </div>
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">درخواست تلفنی</h3>
+            </div>
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">دسترس‌پذیری برای توان‌یابان</h3>
+            </div>
+            <div>
+                <h3 class="text-white text-[18px] py-[20px] text-center">امکانات هوشمند</h3>
+            </div>
+        </div>
+       </div>
+        
+    </section>
+   
+    <section class=" max-w-[85%] m-auto w-full  px-[10px] py-[30px]">
+         <div class="w-full flex flex-col md:flex-row gap-[40px] justify-start items-center md:justify-between" >
+            <div class="md:hidden md:w-[49%]">
+                <img src="./Capture.PNG" class="w-[100%]">
+            </div>
+            <div class="md:w-[49%]">
+                <h2 class="mb-[20px] text-[22px] font-bold text-[35px]">مزایای تپسی برای رانندگان تاکسی اینترنتی</h2>
+                <p class="mb-[20px] text-[14px] md:text-[18px] text-[#A1A1A1] ">رانندگان (سفیران) به‌عنوان همکاران تپسی، جایگاه ویژه‌ای برای شرکت دارند. به همین‌دلیل مزایای مختلفی برای آنها در نظر گرفته شده است.</p>
+                <h3 class="mt-[50px] mb-[20px] text-[16px] md:[22px] text-[#A1A1A1]">کسب درآمد روزانه، پایدار و بدون محدودیت</h3>
+                <ol class="list-decimal  list-inside text-[14px]  md:text-[18px] text-[#A1A1A1]  ">
+                    <li>امکان تسویه‌ی اعتبار در هر ساعت از شبانه‌روز</li>
+                    <li>طرح‌های تشویقی، ماموریت‌ها‌، پاداش و اعطای وام‌های قرض‌الحسنه به‌طور دوره‌ای</li>
+                    <li>نمایش مکان‌های پردرخواست در اپلیکیشن و دریافت سفرهای طلایی</li>
+                </ol>
+                <h3 class="mt-[50px] mb-[20px] text-[16px] md:[22px]  text-[#A1A1A1] ">تضمین امنیت و پشتیبانی رانندگان</h3>
+                <ol class="list-decimal  list-inside text-[14px] md:text-[18px] text-[#A1A1A1] ">
+                    <li> پشتیبانی ۲۴ ساعته</li>
+                    <li> امکانات امنیت سفر شامل تماس اضطراری با واحد امنیت و پشتیبانی ۲۴ ساعته تیم امنیت</li>
+                </ol>
+                <h3 class="mt-[50px] mb-[20px] text-[16px] md:[22px]  text-[#A1A1A1] ">واریز سهمیه بنزین ویژه رانندگان تپسی</h3>
+                <ol class="list-decimal  list-inside text-[14px] md:text-[18px] text-[#A1A1A1] ">
+                    <li>نمایش میزان پیمایش ماهانه درون اپلیکیشن</li>
+                    <li> محاسبه‌ی مسافت طی شده تا مسافر در پیمایش</li>
+                </ol>
+                <h3 class="mt-[50px] mb-[20px] text-[16px] md:[22px]  text-[#A1A1A1] ">استفاده از مزایای
+                    <span>
+                        <a href="https://tapsi.ir/pro " class="text-[#0065DC]  md:text-[18px]">باشگاه رانندگان تپسی</a>
+                    </span>
+                </h3>
+                <ol class="list-decimal  list-inside text-[14px] md:text-[18px] text-[#A1A1A1] ">
+                    <li> تخفیف روی خدمات خودرو مانند بیمه، سرویس‌های دوره‌ای، خرید لاستیک و ...</li>
+                    <li>تخفیف روی خدمات رفاهی مانند وام قرض‌الحسنه، خدمات درمانی، خرید اقساطی و ...</li>
+                </ol>
+            </div>
+            <div class="hidden md:block w-[49%]">
+                <img src="./Capture.PNG" class="w-[100%]">
+            </div>
+            
+         </div>
+         <div class="flex flex-col md:flex-row justify-between md:justify-start  items-center gap-[10px] mt-[50px]">
+              <button class="w-[225px] bg-[#0065DC] border-none text-white text-center text-[14px] cursor-pointer no-underline
+                           py-[15px] rounded-xl mb-[14px] md:mb-0">ثبت نام راننده تاکسی آنلاین</button>
+                                  
+              <button class="w-[225px] bg-[#0065DC] border-none text-white text-center text-[14px] cursor-pointer no-underline
+              py-[15px] rounded-xl">دانلود برنامه تپسی راننده</button>
+         </div>
+    </section>
+    <section class="max-w-[85%] m-auto w-full">
+        <h2 class="text-[22px] mb-[50px] font-bold">تازه‌ترین‌های وبلاگ تپسی</h2>
+      <div class=" md:flex justify-around items-center gap-[50px]">
+        
+        <a href="https://blog.tapsi.ir/school-service/" class="cursor-pointer pb-[50px]">
+             <div>
+                   <img src="https://blog.tapsi.ir/wp-content/uploads/2023/08/20230814-Blog-SchoolService.jpg" class="w-full rounded-xl">
+             </div>
+             <h3 class="text-[16px] py-[10px]">تپسی با سرویس مدرسه آمد</h3>
+             <p class="text-[14px] text-[#A1A1A1]">با نزدیک شدن به مهرماه و شروع سال تحصیلی یکی از دغدغه‌های والدین پیدا کردن یک سرویس مدرسه خوب برای فرزندانشان است. اگر فرزند دانش‌آموز دارید، دیگر نیاز نیست به این دغدغه فکر کنید؛ امسال سرویس مدرسه تپسی در کنار شماست تا هیچ گونه نگرانی برای رفت و آمد دانش‌آموزان نداشته باشید. سرویس مدرسه تپسی […]</p>
+        </a>
+        <a href="https://blog.tapsi.ir/not-in-a-hurry/" class="cursor-pointer pb-[50px]">
+             <div>
+               <img src="https://blog.tapsi.ir/wp-content/uploads/2023/08/20230731-Blog-WaitSave-1.jpg" class="w-full rounded-xl">  
+             </div>
+             <h3 class="text-[16px] py-[10px]">عجله ندارم! ارزان‌تر سفر می‌کنم!</h3>
+             <p class="text-[14px] text-[#A1A1A1]">با استفاده از قابلیت جدید تپسی (عجله ندارم) می‌توانید با کمی انتظار بیشتر برای رسیدن سفیر به مبدا خود، با هزینه‌ کمتر سفر کنید. قابلیت جدید تپسی چگونه کار می‌کند؟ در این قابلیت، شما پس از انتخاب مبدا و مقصد خود سه گزینه در ارتباط با سفر خود‌ خواهید دید: توجه داشته باشید که این […]</p>
+        </a>
+        <a href="https://blog.tapsi.ir/crucial-accident-damage-requirements/" class="cursor-pointer pb-[50px]">
+            <div>
+                <img src="https://blog.tapsi.ir/wp-content/uploads/2023/07/saghf-khesarat-bedone-koroki.jpg" class="w-full rounded-xl">
+            </div>
+            <h3 class="text-[16px] py-[10px]">سقف خسارت بدون کروکی بیمه بدنه در سال 1402</h3>
+            <p class="text-[14px] text-[#A1A1A1]">کروکی کشیدن یکی از اموری است که هر راننده‌ای باید با آن آشنا باشد. کروکی کشیدن از آن دسته مهارت‌هایی است که هر راننده‌ای باید در هنگام تصادف در مورد آن بداند تا هر آن‌چه در زمان وقوع حادثه رخ داده را مکتوب و مستند کند. ساده‌تر که بگوییم، کروکی کشیدن به معنای مشخص کردن […]</p>
+        </a>
+      </div>
+    </section >
+    
+    <section class="max-w-[85%] m-auto w-full">
+        <h2>تپسی در ایران</h2>
+        <div class="hidden md:grid grid-cols-8 w-full gap-y-[25px] gap-x-[25px]">
+         <div>
+            <h3>تهران</h3>
+            <h3>tehran</h3>
+         </div>
+         <div>
+            <h3>کرج</h3>
+            <h3>karaj</h3>
+         </div>
+         <div>
+            <h3>مشهد</h3>
+            <h3>mashhad</h3>
+         </div>
+         <div>
+            <h3>اصفهان</h3>
+            <h3>esfahan</h3>
+         </div>
+         <div>
+            <h3>شیراز</h3>
+            <h3>shiraz</h3>
+         </div>
+         <div>
+            <h3>ارومیه</h3>
+            <h3>urmia</h3>
+         </div>
+         <div>
+            <h3>لاهیجان</h3>
+            <h3>lahijan</h3>
+         </div>
+         <div>
+            <h3>رشت</h3>
+            <h3>rasht</h3>
+         </div>
+         <div>
+            <h3>انزلی</h3>
+            <h3>anzali</h3>
+         </div>
+         <div>
+            <h3>تبریز</h3>
+            <h3>tabriz</h3>
+         </div>
+         <div>
+            <h3>ساری</h3>
+            <h3>sari</h3>
+         </div>
+         <div>
+            <h3>یرد</h3>
+            <h3>yazd</h3>
+         </div>
+         <div>
+            <h3>کرمان</h3>
+            <h3>kerman</h3>
+         </div>
+         <div>
+            <h3>قم</h3>
+            <h3>qom</h3>
+         </div>
+         <div>
+            <h3>اهواز</h3>
+            <h3>ahvaz</h3>
+         </div>
+         <div>
+            <h3>بابل</h3>
+            <h3>babol</h3>
+         </div>
+         <div>
+            <h3>قائم‌شهر</h3>
+            <h3>ghaemshahr</h3>
+         </div>
+         <div>
+            <h3>آمل</h3>
+            <h3>amol</h3>
+         </div>
+         <div>
+            <h3>کرمانشاه</h3>
+            <h3>kermanshah</h3>
+         </div>
+         <div>
+            <h3>گرگان</h3>
+            <h3>gorgan</h3>
+         </div>
+         <div>
+            <h3>قزوین</h3>
+            <h3>ghazvin</h3>
+         </div>
+         <div>
+            <h3>اراک</h3>
+            <h3>arak</h3>
+         </div>
+         <div>
+            <h3>نیشابور</h3>
+            <h3>neishaboor</h3>
+         </div>
+         <div>
+            <h3>نور</h3>
+            <h3>noor</h3>
+         </div>
+         <div>
+            <h3>محمودآباد</h3>
+            <h3>mahmoodabad</h3>
+         </div>
+         <div>
+            <h3>بجنورد</h3>
+            <h3>bojnoord</h3>
+         </div>
+         <div>
+            <h3>اردبیل </h3>
+            <h3>ardebil</h3>
+         </div>
+         <div>
+            <h3>همدان</h3>
+            <h3>hamedan</h3>
+         </div>
+         <div>
+            <h3>خرم آباد</h3>
+            <h3>khoramabad</h3>
+         </div>
+         <div>
+            <h3>کیش</h3>
+            <h3>kish</h3>
+         </div>    
+        </div>
+    </section>
+    <footer class="w-full  bg-black py-[50px] px-[25px]">
+        <section class=" px-[20px] flex flex-col justify-between items-start gap-[50px] md:hidden ">
+            <div class="flex flex-col justify-between items-start gap-[20px] text-white">
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="102" height="22" viewBox="0 0 102 22">
+                        <g fill="#FFF" fill-rule="evenodd">
+                            <path d="M102 5.946h-3.222v4.28H91.8v-4.28h-3.221v4.28h-5.637a1.878 1.878 0 0 1-1.879-1.872V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873 1.878 1.878 0 0 1-1.879-1.873V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873h-1.879V5.946h-3.22v4.28h-17.18v3.212h3.758v.535c0 2.656-2.167 4.816-4.831 4.816-2.664 0-4.832-2.16-4.832-4.816v-3.746H37.58v3.746c0 4.426 3.613 8.027 8.053 8.027 4.44 0 8.052-3.6 8.052-8.027v-.535H68.985a5.09 5.09 0 0 0 3.489-1.381 5.09 5.09 0 0 0 3.49 1.38 5.09 5.09 0 0 0 3.489-1.38 5.089 5.089 0 0 0 3.489 1.38H102V5.947z"/>
+                            <path d="M84.702 19.297h3.854V22h3.304v-5.946h-7.158zM102 0h-6.561v2.973H102zM26.842 11.297H10.737V5.946h16.105zM26.842 22H0v-5.351h26.842z"/>
+                        </g>
+                    </svg>
+                </a>
+                <h3 class=" text-[12px]">اپلیکیشن درخواست خودرو و پیک</h3>
+            </div>
+            <div class="flex flex-col justify-around items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">تپسی</h6>
+                <a href="https://blog.tapsi.ir/" class="text-[14px] mb-[5px]">وبلاگ تپسی</a>
+                <a href="https://careers.tapsi.ir/" class="text-[14px] mb-[5px]">فرصت شغلی</a>
+                <a href="https://tapsi.ir/contact" class="text-[14px] mb-[5px]">تماس با ما</a>
+                <a href="https://tapsi.ir/brand" class="text-[14px] mb-[5px]">لوگو و هویت سازمانی</a>
+                <a href="https://tapsi.ir/affiliate" class="text-[14px] mb-[5px]">معرفی راننده به تپسی</a>
+                <a href="https://tapsi.ir/field" class="text-[14px] mb-[5px]">استخدام بازاریاب</a>
+            </div>
+            <div class="flex flex-col justify-around items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">مسافران</h6>
+                <a href="https://tapsi.ir/passengers/dl"  class="text-[14px] mb-[5px]">دانلود اپ مسافر</a>
+                <a href="https://app.tapsi.cab"  class="text-[14px] mb-[5px] text-red">نسخه وب تپسی</a>
+                <a href="https://tapsi.ir/passengers/faq"  class="text-[14px] mb-[5px]">پرسش‌های متداول مسافران</a>
+                <a href="https://tapsi.ir/terms/passengers"  class="text-[14px] mb-[5px]">شرایط و قوانین مسافران</a>
+                <a href="https://tapsi.ir/spaceship/"  class="text-[14px] mb-[5px]">باشگاه مشتریان</a>
+            </div>
+            <div class="flex flex-col justify-around items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">رانندگان</h6>
+                <a href="https://tapsi.ir/drivers/dl" class="text-[14px] mb-[5px]">دانلود اپ سفیر</a>
+                <a href="https://join.tapsi.cab/login" class="text-[14px] mb-[5px]">ثبت نام راننده تاکسی اینترنتی</a>
+                <a href="https://tapsi.ir/drivers/faq" class="text-[14px] mb-[5px]">پرسش‌های متداول سفیران</a>
+                <a href="https://tapsi.ir/terms/drivers" class="text-[14px] mb-[5px]">شرایط و قوانین سفیران</a>
+                <a href="https://tapsi.ir/pro" class="text-[14px] mb-[5px]"> باشگاه سفیران</a>
+                <a href="https://campaigns.tapsi.ir/biker/join" class="text-[14px] mb-[5px]">ثبت نام راننده موتور</a>
+
+            </div>
+            <div class="flex flex-col justify-around items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">کسب و کارها</h6>
+                <a href="https://co.tapsi.ir/login" class="text-[14px] mb-[5px]">پنل سازمانی تپسی</a>
+                <a href="https://vouchers.tapsi.ir/login" class="text-[14px] mb-[5px]">خرید کد اعتبار و تخفیف</a>
+                <a href="https://tapsi.ir/corporate" class="text-[14px] mb-[5px]">دریافت API</a>
+            </div>
+            <div class="w-full flex justify-between content-center ">
+                <div class="w-[120px] h-[136]">
+                    <img src="./18.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+                <div class="w-[120px] h-[136]">
+                    <img src="./20.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+                <div class="w-[120px] h-[136]">
+                    <img src="./19.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+            </div>
+           
+        </section>
+        <section class="md:hidden ">
+            <p class="text-[#A1A1A1] mt-[25px] ">تمام حقوق مادی و معنوی این وبسایت متعلق به تپسی است. </p>
+            <div class="flex justify-evenly items-center mt-[25px] ">
+                <a href="https://www.facebook.com/TAPSI.ir" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20">
+                        <path fill="#ababab" fill-rule="nonzero" d="M6.393 6.875v-2.5c0-.69.56-1.25 1.25-1.25h1.25V0h-2.5a3.75 3.75 0 0 0-3.75 3.75v3.125h-2.5V10h2.5v10h3.75V10h2.5l1.25-3.125h-3.75z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/tapsi_ir/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                        <path fill="#ababab" fill-rule="nonzero" d="M14.464 0a6.25 6.25 0 0 1 6.25 6.25v7.5a6.25 6.25 0 0 1-6.25 6.25h-7.5a6.25 6.25 0 0 1-6.25-6.25v-7.5A6.25 6.25 0 0 1 6.964 0h7.5zm4.375 13.75v-7.5a4.38 4.38 0 0 0-4.375-4.375h-7.5A4.38 4.38 0 0 0 2.59 6.25v7.5a4.38 4.38 0 0 0 4.375 4.375h7.5a4.38 4.38 0 0 0 4.375-4.375zM10.714 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.125A3.13 3.13 0 0 0 13.84 10a3.129 3.129 0 0 0-3.125-3.125A3.129 3.129 0 0 0 7.59 10a3.13 3.13 0 0 0 3.125 3.125zm5.375-7.834a.666.666 0 1 1 0-1.332.666.666 0 0 1 0 1.332z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/TAPSI_ir" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+                        <path fill="#ababab" fill-rule="nonzero" d="M22.857 2.627a9.77 9.77 0 0 1-2.7.74A4.66 4.66 0 0 0 22.22.777a9.365 9.365 0 0 1-2.972 1.134 4.684 4.684 0 0 0-8.106 3.204c0 .372.032.73.109 1.07-3.896-.19-7.343-2.058-9.659-4.902A4.718 4.718 0 0 0 .95 3.65c0 1.623.836 3.062 2.081 3.895a4.628 4.628 0 0 1-2.117-.577v.051a4.707 4.707 0 0 0 3.755 4.604 4.677 4.677 0 0 1-1.229.155c-.3 0-.603-.018-.887-.08.607 1.855 2.33 3.22 4.378 3.264a9.415 9.415 0 0 1-5.81 1.998c-.384 0-.752-.017-1.121-.064A13.192 13.192 0 0 0 7.189 19c8.622 0 13.337-7.143 13.337-13.334 0-.207-.007-.407-.017-.606a9.348 9.348 0 0 0 2.348-2.433z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/tap30" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.21 37.46"  width="23" height="19"><defs><style>.cls-1{fill:#ababab;}</style></defs><title>Asset 25</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="LinkedIn"><rect class="cls-1" x="1.04" y="12.01" width="8.03" height="25.45"/><path class="cls-1" d="M31,11.77c-4.6,0-7.48,2.49-8,4.24V12H14c.12,2.12,0,25.45,0,25.45h9V23.69a5.8,5.8,0,0,1,.2-2.08,4.6,4.6,0,0,1,4.35-3.12c3.13,0,4.56,2.35,4.56,5.8V37.46h9.11V23.31C41.21,15.43,36.73,11.77,31,11.77Z"/><path class="cls-1" d="M4.91,0C1.94,0,0,1.9,0,4.42S1.89,8.83,4.79,8.83h.06c3,0,4.9-2,4.9-4.42S7.87,0,4.91,0Z"/></g></g></g></svg>
+                </a>
+                <a href="https://t.me/tapsi_cab" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+                        <path fill="#ABABAB" d="M9.025 12.522l-.38 5.305c.544 0 .78-.232 1.062-.51l2.552-2.418 5.289 3.84c.97.535 1.653.253 1.914-.885L22.934 1.73C23.243.307 22.417-.249 21.472.1L1.068 7.844C-.325 8.38-.304 9.15.83 9.498l5.216 1.609L18.164 3.59c.57-.374 1.089-.167.662.207l-9.801 8.724z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <section class="hidden   md:grid grid-cols-4 justify-between items-start w-full max-w-[85%] m-auto lg:hidden ">
+            <div class="flex flex-col justify-start items-start gap-[20px] text-white">
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="102" height="22" viewBox="0 0 102 22">
+                        <g fill="#FFF" fill-rule="evenodd">
+                            <path d="M102 5.946h-3.222v4.28H91.8v-4.28h-3.221v4.28h-5.637a1.878 1.878 0 0 1-1.879-1.872V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873 1.878 1.878 0 0 1-1.879-1.873V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873h-1.879V5.946h-3.22v4.28h-17.18v3.212h3.758v.535c0 2.656-2.167 4.816-4.831 4.816-2.664 0-4.832-2.16-4.832-4.816v-3.746H37.58v3.746c0 4.426 3.613 8.027 8.053 8.027 4.44 0 8.052-3.6 8.052-8.027v-.535H68.985a5.09 5.09 0 0 0 3.489-1.381 5.09 5.09 0 0 0 3.49 1.38 5.09 5.09 0 0 0 3.489-1.38 5.089 5.089 0 0 0 3.489 1.38H102V5.947z"/>
+                            <path d="M84.702 19.297h3.854V22h3.304v-5.946h-7.158zM102 0h-6.561v2.973H102zM26.842 11.297H10.737V5.946h16.105zM26.842 22H0v-5.351h26.842z"/>
+                        </g>
+                    </svg>
+                </a>
+                <h3 class=" text-[12px]">اپلیکیشن درخواست خودرو و پیک</h3>
+                <p class="text-gray">تمام حقوق مادی و معنوی این وبسایت متعلق به تپسی است. </p>
+            </div>
+            <div class="flex flex-col justify-start items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">تپسی</h6>
+                <a href="https://blog.tapsi.ir/" class="text-[14px] mb-[5px]">وبلاگ تپسی</a>
+                <a href="https://careers.tapsi.ir/" class="text-[14px] mb-[5px]">فرصت شغلی</a>
+                <a href="https://tapsi.ir/contact" class="text-[14px] mb-[5px]">تماس با ما</a>
+                <a href="https://tapsi.ir/brand" class="text-[14px] mb-[5px]">لوگو و هویت سازمانی</a>
+                <a href="https://tapsi.ir/affiliate" class="text-[14px] mb-[5px]">معرفی راننده به تپسی</a>
+                <a href="https://tapsi.ir/field" class="text-[14px] mb-[5px]">استخدام بازاریاب</a>
+            </div>
+            <div class="flex flex-col justify-start items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">مسافران</h6>
+                <a href="https://tapsi.ir/passengers/dl"  class="text-[14px] mb-[5px]">دانلود اپ مسافر</a>
+                <a href="https://app.tapsi.cab"  class="text-[14px] mb-[5px] text-red">نسخه وب تپسی</a>
+                <a href="https://tapsi.ir/passengers/faq"  class="text-[14px] mb-[5px]">پرسش‌های متداول مسافران</a>
+                <a href="https://tapsi.ir/terms/passengers"  class="text-[14px] mb-[5px]">شرایط و قوانین مسافران</a>
+                <a href="https://tapsi.ir/spaceship/"  class="text-[14px] mb-[5px]">باشگاه مشتریان</a>
+            </div>
+            <div class="flex flex-col justify-start items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">رانندگان</h6>
+                <a href="https://tapsi.ir/drivers/dl" class="text-[14px] mb-[5px]">دانلود اپ سفیر</a>
+                <a href="https://join.tapsi.cab/login" class="text-[14px] mb-[5px]">ثبت نام راننده تاکسی اینترنتی</a>
+                <a href="https://tapsi.ir/drivers/faq" class="text-[14px] mb-[5px]">پرسش‌های متداول سفیران</a>
+                <a href="https://tapsi.ir/terms/drivers" class="text-[14px] mb-[5px]">شرایط و قوانین سفیران</a>
+                <a href="https://tapsi.ir/pro" class="text-[14px] mb-[5px]"> باشگاه سفیران</a>
+                <a href="https://campaigns.tapsi.ir/biker/join" class="text-[14px] mb-[5px]">ثبت نام راننده موتور</a>
+
+            </div>
+            <div class="flex flex-col justify-start items-start  text-white col-start-1 col-end-4">
+                <h6 class="text-[20px] mb-[12px]">کسب و کارها</h6>
+                <a href="https://co.tapsi.ir/login" class="text-[14px] mb-[5px]">پنل سازمانی تپسی</a>
+                <a href="https://vouchers.tapsi.ir/login" class="text-[14px] mb-[5px]">خرید کد اعتبار و تخفیف</a>
+                <a href="https://tapsi.ir/corporate" class="text-[14px] mb-[5px]">دریافت API</a>
+            </div>
+            <div class="w-full flex justify-between content-center gap-[5px]">
+                <div class="w-[120px] h-[136]">
+                    <img src="./18.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+                <div class="w-[120px] h-[136]">
+                    <img src="./20.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+                <div class="w-[120px] h-[136]">
+                    <img src="./19.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+            </div>
+           
+        </section>
+        <section class=" hidden mt-[25px]w-full max-w-[85%] m-auto lg:hidden">
+            <p class="text-white text-[14px]">تپسی در شبکه های اجتماعی</p>
+            <div class="flex justify-start items-center gap-[13px]  ">
+                <a href="https://www.facebook.com/TAPSI.ir" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20">
+                        <path fill="#ababab" fill-rule="nonzero" d="M6.393 6.875v-2.5c0-.69.56-1.25 1.25-1.25h1.25V0h-2.5a3.75 3.75 0 0 0-3.75 3.75v3.125h-2.5V10h2.5v10h3.75V10h2.5l1.25-3.125h-3.75z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/tapsi_ir/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                        <path fill="#ababab" fill-rule="nonzero" d="M14.464 0a6.25 6.25 0 0 1 6.25 6.25v7.5a6.25 6.25 0 0 1-6.25 6.25h-7.5a6.25 6.25 0 0 1-6.25-6.25v-7.5A6.25 6.25 0 0 1 6.964 0h7.5zm4.375 13.75v-7.5a4.38 4.38 0 0 0-4.375-4.375h-7.5A4.38 4.38 0 0 0 2.59 6.25v7.5a4.38 4.38 0 0 0 4.375 4.375h7.5a4.38 4.38 0 0 0 4.375-4.375zM10.714 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.125A3.13 3.13 0 0 0 13.84 10a3.129 3.129 0 0 0-3.125-3.125A3.129 3.129 0 0 0 7.59 10a3.13 3.13 0 0 0 3.125 3.125zm5.375-7.834a.666.666 0 1 1 0-1.332.666.666 0 0 1 0 1.332z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/TAPSI_ir" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+                        <path fill="#ababab" fill-rule="nonzero" d="M22.857 2.627a9.77 9.77 0 0 1-2.7.74A4.66 4.66 0 0 0 22.22.777a9.365 9.365 0 0 1-2.972 1.134 4.684 4.684 0 0 0-8.106 3.204c0 .372.032.73.109 1.07-3.896-.19-7.343-2.058-9.659-4.902A4.718 4.718 0 0 0 .95 3.65c0 1.623.836 3.062 2.081 3.895a4.628 4.628 0 0 1-2.117-.577v.051a4.707 4.707 0 0 0 3.755 4.604 4.677 4.677 0 0 1-1.229.155c-.3 0-.603-.018-.887-.08.607 1.855 2.33 3.22 4.378 3.264a9.415 9.415 0 0 1-5.81 1.998c-.384 0-.752-.017-1.121-.064A13.192 13.192 0 0 0 7.189 19c8.622 0 13.337-7.143 13.337-13.334 0-.207-.007-.407-.017-.606a9.348 9.348 0 0 0 2.348-2.433z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/tap30" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.21 37.46"  width="23" height="19"><defs><style>.cls-1{fill:#ababab;}</style></defs><title>Asset 25</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="LinkedIn"><rect class="cls-1" x="1.04" y="12.01" width="8.03" height="25.45"/><path class="cls-1" d="M31,11.77c-4.6,0-7.48,2.49-8,4.24V12H14c.12,2.12,0,25.45,0,25.45h9V23.69a5.8,5.8,0,0,1,.2-2.08,4.6,4.6,0,0,1,4.35-3.12c3.13,0,4.56,2.35,4.56,5.8V37.46h9.11V23.31C41.21,15.43,36.73,11.77,31,11.77Z"/><path class="cls-1" d="M4.91,0C1.94,0,0,1.9,0,4.42S1.89,8.83,4.79,8.83h.06c3,0,4.9-2,4.9-4.42S7.87,0,4.91,0Z"/></g></g></g></svg>
+                </a>
+                <a href="https://t.me/tapsi_cab" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+                        <path fill="#ABABAB" d="M9.025 12.522l-.38 5.305c.544 0 .78-.232 1.062-.51l2.552-2.418 5.289 3.84c.97.535 1.653.253 1.914-.885L22.934 1.73C23.243.307 22.417-.249 21.472.1L1.068 7.844C-.325 8.38-.304 9.15.83 9.498l5.216 1.609L18.164 3.59c.57-.374 1.089-.167.662.207l-9.801 8.724z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="hidden   md:hidden lg:flex w-full max-w-[85%] m-auto justify-between items-start flex-wrap gap-[10px] ">
+            <div class="w-[150px] flex flex-col justify-start items-start gap-[20px] text-white">
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="102" height="22" viewBox="0 0 102 22">
+                        <g fill="#FFF" fill-rule="evenodd">
+                            <path d="M102 5.946h-3.222v4.28H91.8v-4.28h-3.221v4.28h-5.637a1.878 1.878 0 0 1-1.879-1.872V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873 1.878 1.878 0 0 1-1.879-1.873V5.946h-3.221v2.408a1.878 1.878 0 0 1-1.879 1.873h-1.879V5.946h-3.22v4.28h-17.18v3.212h3.758v.535c0 2.656-2.167 4.816-4.831 4.816-2.664 0-4.832-2.16-4.832-4.816v-3.746H37.58v3.746c0 4.426 3.613 8.027 8.053 8.027 4.44 0 8.052-3.6 8.052-8.027v-.535H68.985a5.09 5.09 0 0 0 3.489-1.381 5.09 5.09 0 0 0 3.49 1.38 5.09 5.09 0 0 0 3.489-1.38 5.089 5.089 0 0 0 3.489 1.38H102V5.947z"/>
+                            <path d="M84.702 19.297h3.854V22h3.304v-5.946h-7.158zM102 0h-6.561v2.973H102zM26.842 11.297H10.737V5.946h16.105zM26.842 22H0v-5.351h26.842z"/>
+                        </g>
+                    </svg>
+                </a>
+                <h3 class=" text-[12px]">اپلیکیشن درخواست خودرو و پیک</h3>
+                <p class="text-gray">تمام حقوق مادی و معنوی این وبسایت متعلق به تپسی است. </p>
+            </div>
+            <div class="w-[150px] flex flex-col justify-start items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">تپسی</h6>
+                <a href="https://blog.tapsi.ir/" class="text-[14px] mb-[5px]">وبلاگ تپسی</a>
+                <a href="https://careers.tapsi.ir/" class="text-[14px] mb-[5px]">فرصت شغلی</a>
+                <a href="https://tapsi.ir/contact" class="text-[14px] mb-[5px]">تماس با ما</a>
+                <a href="https://tapsi.ir/brand" class="text-[14px] mb-[5px]">لوگو و هویت سازمانی</a>
+                <a href="https://tapsi.ir/affiliate" class="text-[14px] mb-[5px]">معرفی راننده به تپسی</a>
+                <a href="https://tapsi.ir/field" class="text-[14px] mb-[5px]">استخدام بازاریاب</a>
+            </div>
+            <div class="w-[150px] flex flex-col justify-start items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">مسافران</h6>
+                <a href="https://tapsi.ir/passengers/dl"  class="text-[14px] mb-[5px]">دانلود اپ مسافر</a>
+                <a href="https://app.tapsi.cab"  class="text-[14px] mb-[5px] text-red">نسخه وب تپسی</a>
+                <a href="https://tapsi.ir/passengers/faq"  class="text-[14px] mb-[5px]">پرسش‌های متداول مسافران</a>
+                <a href="https://tapsi.ir/terms/passengers"  class="text-[14px] mb-[5px]">شرایط و قوانین مسافران</a>
+                <a href="https://tapsi.ir/spaceship/"  class="text-[14px] mb-[5px]">باشگاه مشتریان</a>
+            </div>
+            <div class="w-[150px] flex flex-col justify-start items-start  text-white">
+                <h6 class="text-[20px] mb-[12px]">رانندگان</h6>
+                <a href="https://tapsi.ir/drivers/dl" class="text-[14px] mb-[5px]">دانلود اپ سفیر</a>
+                <a href="https://join.tapsi.cab/login" class="text-[14px] mb-[5px]">ثبت نام راننده تاکسی اینترنتی</a>
+                <a href="https://tapsi.ir/drivers/faq" class="text-[14px] mb-[5px]">پرسش‌های متداول سفیران</a>
+                <a href="https://tapsi.ir/terms/drivers" class="text-[14px] mb-[5px]">شرایط و قوانین سفیران</a>
+                <a href="https://tapsi.ir/pro" class="text-[14px] mb-[5px]"> باشگاه سفیران</a>
+                <a href="https://campaigns.tapsi.ir/biker/join" class="text-[14px] mb-[5px]">ثبت نام راننده موتور</a>
+
+            </div>
+            <div class="w-[150px] flex flex-col justify-start items-start  text-white ">
+                <h6 class="text-[20px] mb-[12px]">کسب و کارها</h6>
+                <a href="https://co.tapsi.ir/login" class="text-[14px] mb-[5px]">پنل سازمانی تپسی</a>
+                <a href="https://vouchers.tapsi.ir/login" class="text-[14px] mb-[5px]">خرید کد اعتبار و تخفیف</a>
+                <a href="https://tapsi.ir/corporate" class="text-[14px] mb-[5px]">دریافت API</a>
+            </div>
+            <div class="w-[150px] flex justify-between content-center gap-[5px]">
+                <div class="w-[120px] h-[136]">
+                    <img src="./18.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+                <div class="w-[120px] h-[136]">
+                    <img src="./20.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+                <div class="w-[120px] h-[136]">
+                    <img src="./19.PNG" class="w-full h-full rounded-[12px]">
+                </div>
+            </div>
+           
+        </section>
+        <section class=" hidden md:hidden lg:block mt-[25px]w-full max-w-[85%] m-auto">
+            <p class="text-white text-[14px]">تپسی در شبکه های اجتماعی</p>
+            <div class="flex justify-start items-center gap-[13px]  ">
+                <a href="https://www.facebook.com/TAPSI.ir" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20">
+                        <path fill="#ababab" fill-rule="nonzero" d="M6.393 6.875v-2.5c0-.69.56-1.25 1.25-1.25h1.25V0h-2.5a3.75 3.75 0 0 0-3.75 3.75v3.125h-2.5V10h2.5v10h3.75V10h2.5l1.25-3.125h-3.75z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/tapsi_ir/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                        <path fill="#ababab" fill-rule="nonzero" d="M14.464 0a6.25 6.25 0 0 1 6.25 6.25v7.5a6.25 6.25 0 0 1-6.25 6.25h-7.5a6.25 6.25 0 0 1-6.25-6.25v-7.5A6.25 6.25 0 0 1 6.964 0h7.5zm4.375 13.75v-7.5a4.38 4.38 0 0 0-4.375-4.375h-7.5A4.38 4.38 0 0 0 2.59 6.25v7.5a4.38 4.38 0 0 0 4.375 4.375h7.5a4.38 4.38 0 0 0 4.375-4.375zM10.714 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.125A3.13 3.13 0 0 0 13.84 10a3.129 3.129 0 0 0-3.125-3.125A3.129 3.129 0 0 0 7.59 10a3.13 3.13 0 0 0 3.125 3.125zm5.375-7.834a.666.666 0 1 1 0-1.332.666.666 0 0 1 0 1.332z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/TAPSI_ir" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+                        <path fill="#ababab" fill-rule="nonzero" d="M22.857 2.627a9.77 9.77 0 0 1-2.7.74A4.66 4.66 0 0 0 22.22.777a9.365 9.365 0 0 1-2.972 1.134 4.684 4.684 0 0 0-8.106 3.204c0 .372.032.73.109 1.07-3.896-.19-7.343-2.058-9.659-4.902A4.718 4.718 0 0 0 .95 3.65c0 1.623.836 3.062 2.081 3.895a4.628 4.628 0 0 1-2.117-.577v.051a4.707 4.707 0 0 0 3.755 4.604 4.677 4.677 0 0 1-1.229.155c-.3 0-.603-.018-.887-.08.607 1.855 2.33 3.22 4.378 3.264a9.415 9.415 0 0 1-5.81 1.998c-.384 0-.752-.017-1.121-.064A13.192 13.192 0 0 0 7.189 19c8.622 0 13.337-7.143 13.337-13.334 0-.207-.007-.407-.017-.606a9.348 9.348 0 0 0 2.348-2.433z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/tap30" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.21 37.46"  width="23" height="19"><defs><style>.cls-1{fill:#ababab;}</style></defs><title>Asset 25</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="LinkedIn"><rect class="cls-1" x="1.04" y="12.01" width="8.03" height="25.45"/><path class="cls-1" d="M31,11.77c-4.6,0-7.48,2.49-8,4.24V12H14c.12,2.12,0,25.45,0,25.45h9V23.69a5.8,5.8,0,0,1,.2-2.08,4.6,4.6,0,0,1,4.35-3.12c3.13,0,4.56,2.35,4.56,5.8V37.46h9.11V23.31C41.21,15.43,36.73,11.77,31,11.77Z"/><path class="cls-1" d="M4.91,0C1.94,0,0,1.9,0,4.42S1.89,8.83,4.79,8.83h.06c3,0,4.9-2,4.9-4.42S7.87,0,4.91,0Z"/></g></g></g></svg>
+                </a>
+                <a href="https://t.me/tapsi_cab" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+                        <path fill="#ABABAB" d="M9.025 12.522l-.38 5.305c.544 0 .78-.232 1.062-.51l2.552-2.418 5.289 3.84c.97.535 1.653.253 1.914-.885L22.934 1.73C23.243.307 22.417-.249 21.472.1L1.068 7.844C-.325 8.38-.304 9.15.83 9.498l5.216 1.609L18.164 3.59c.57-.374 1.089-.167.662.207l-9.801 8.724z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
